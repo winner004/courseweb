@@ -37,6 +37,8 @@ body{
     border-bottom: 1px solid #e1e1e7;
     padding-bottom: 20px;
     overflow: hidden;padding-top: 20px}
+/*侧边栏样式*/
+
 .widget{
     background-color: #ffffff;margin: 20px auto; border-radius: 5px;
 }
@@ -51,4 +53,32 @@ body{
 
 .ant-card-grid span{
     display: block;
+}
+
+/*课程详细页的样式*/
+
+.coursedetail .title{
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+.coursedetail h1
+{
+    font-size: 24px;
+    line-height: 30px;
+    margin: 25px 15px 15px 20px;
+}
+.coursedetail .content{
+    overflow: hidden;
+    margin: 20px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: justify;
+}
+.coursedetail .auth{
+    background-color: rgba(74, 74, 74, 0.04);
+}
+.coursedetail .coursedescribe{
+    font-size: 16px;
+    margin:20px auto;
+    border: 0;
 }

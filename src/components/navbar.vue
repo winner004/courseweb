@@ -12,6 +12,7 @@
 </template>
 
 <script>
+    import { AllRouterConfigs } from "../config/RouterConfig";
     import Vue from "vue"
     import { Breadcrumb} from "ant-design-vue"
     //使用Jax方式不需要写到components中
@@ -25,15 +26,16 @@ export default {
             mynav:[
                 {path:"/a1",meta:{navname:"自定义导航1",index:2}},
                 {path:"/a2",meta:{navname:"自定义导航2",index:6}},
-                {path:"/rec",meta:{navname:"推荐课程",index:6},href:"/course/"},
-                {path:"search",meta:{navname:"搜索框",index:4},
+                {path:"/rec",meta:{navname:"推荐课程",index:7},href:"/course/"},
+                {path:"search",meta:{navname:"搜索框",index:8},
                     comp:<searchText/>},
             ],
         };
     },
     computed:{
         navroutes(){
-            let navs=this.$router.options.routes.concat(this.mynav)
+            //  let navs=this.$router.options.routes.concat(this.mynav);
+            let navs=AllRouterConfigs.concat(this.mynav)
             navs.sort((item1,item2) => {
                 if(item1.meta.index>item2.meta.index) return 1;
                 if(item1.meta.index<item2.meta.index) return -1;
@@ -45,6 +47,9 @@ export default {
     methods:{
 
         renderNav({route, params, routes, paths}){
+            if("meta" in route && "hide" in route.meta ){
+                return
+            }
             if("comp" in route){
                 return route["comp"]
             }

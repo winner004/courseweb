@@ -12,7 +12,7 @@
             <a-col :span="20">
                 <a-row >
                     <a-col :span="24" class="title courseline">
-                    Java从入门到精通
+                        <router-link :to="{name:'coursedetail',params:{id:123}}">Java从入门到精通</router-link>
                 </a-col>
                     <a-col :span="24" class="introduce courseline" >
                         这里放的是课程的简介

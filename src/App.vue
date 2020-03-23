@@ -8,11 +8,11 @@
 </template>
 
 <script>
-  import router from "./config/RouterConfig"
+  import { IndexRouter } from "./config/RouterConfig"
   import navbar from "@/components/navbar"
   export default {
       name:'app',
-      router,
+      router: IndexRouter,
       components:{
           navbar
       }
