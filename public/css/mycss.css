@@ -1,0 +1,54 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin: 0 auto;
+}
+.ant-breadcrumb{
+    border: solid 1px #ddd;
+    background-color: #ffffff;
+    height: 70px;
+    font-size: 16px;
+    padding-top: 20px;
+}
+body{
+    background-color: rgb(245,245,245);
+}
+.container{
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+._ant-row div{border: solid 1px red}
+.course{ background-color: #ffffff;margin:20px auto;border-radius: 5px}
+.course .listh{font-size:18px;text-align: left;line-height:25pt;text-indent: 1em;margin-bottom: 20px}
+.course .courseline{text-align: left;line-height: 23pt}
+.course .title{ color: #4a4a4a;
+    font-size: 18px;
+    font-weight: bold;}
+.course .img{width:93px;height:120px;}
+.course .introduce{ }
+.course .price{color:#CE2B2F;font-size: 22px}
+.course .column{
+    border-bottom: 1px solid #e1e1e7;
+    padding-bottom: 20px;
+    overflow: hidden;padding-top: 20px}
+.widget{
+    background-color: #ffffff;margin: 20px auto; border-radius: 5px;
+}
+.widget .anticon {
+    font-size: 22px;
+}
+/*为了与阿里图标统一，这里强制设为长宽同阿里尺寸1em*/
+.widget .anticon svg{
+    width: 1em;
+    height: 1em;
+}
+
+.ant-card-grid span{
+    display: block;
+}
