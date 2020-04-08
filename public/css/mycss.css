@@ -23,7 +23,10 @@ body{
     overflow-x: auto;
     overflow-y: hidden;
 }
+.row{line-height: 22pt;text-align: center}
+.left{text-align: left}
 ._ant-row div{border: solid 1px red}
+.course,.coursedetail{ background-color: #ffffff;margin:20px auto;border-radius: 5px}
 .course{ background-color: #ffffff;margin:20px auto;border-radius: 5px}
 .course .listh{font-size:18px;text-align: left;line-height:25pt;text-indent: 1em;margin-bottom: 20px}
 .course .courseline{text-align: left;line-height: 23pt}
@@ -82,3 +85,16 @@ body{
     margin:20px auto;
     border: 0;
 }
+.ant-list-item-meta-title {font-size: 16px}
+.ant-tabs-tab{font-size: 16px}
+.ant-list-item-meta-description{font-size: 16px;
+    text-indent: 1em;}
+.coursedetail .lessonimg{width:100%;}
+.coursedetail .lessondetail{
+    margin: 20px;
+    font-size: 16px;
+    line-height: 28px;
+    position: relative;
+    text-align: left;
+}
+.coursedetail .lessondetail p{text-indent: 2em}

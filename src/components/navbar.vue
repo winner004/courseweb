@@ -14,10 +14,13 @@
 <script>
     import { AllRouterConfigs } from "../config/RouterConfig";
     import Vue from "vue"
-    import { Breadcrumb} from "ant-design-vue"
+    import {Breadcrumb,Input,Avatar,Popover} from "ant-design-vue"
     //使用Jax方式不需要写到components中
     import searchText from "./searchText"
     Vue.use(Breadcrumb)
+    Vue.use(Input)
+    Vue.use(Avatar)
+    Vue.use(Popover)
 
 export default {
   name: 'navbar',
@@ -29,6 +32,17 @@ export default {
                 {path:"/rec",meta:{navname:"推荐课程",index:7},href:"/course/"},
                 {path:"search",meta:{navname:"搜索框",index:8},
                     comp:<searchText/>},
+                {path:"avatar",meta:{navname:"用户头像",index:100},
+                    comp:<a-popover   trigger="click">
+                        <template slot="content">
+                            <p>我的课程</p>
+                            <p><a href="/users/#/pub">发布课程</a></p>
+                            <p>账号设置</p>
+                            <p>退出登录</p>
+                        </template>
+                        <a-avatar   style="backgroundColor:#87d068"  icon="user"/>
+                    </a-popover>
+                }
             ],
         };
     },

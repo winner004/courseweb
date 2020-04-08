@@ -14,13 +14,24 @@ const CourseRouterConfig={
         },
         {path:"/detail/:id",name:"coursedetail",meta:{navname:"课程详细",hide:1,},href:"/course/",
             component:()=>import("@/modules/course/coursedetail")},
+        {path:"/lesson/:id",name:"courselesson",meta:{navname:"课时",hide:1,},href:"/course/",
+            component:()=>import("@/modules/course/lesson")},
+    ]
+};
+const UserRouterConfig={
+    routes:[
+        {path:"/",meta:{navname:"会员中心",index:20},href:"/users/",
+            component:()=>import("@/modules/users/usersindex")},
+        {path:"/pub",meta:{navname:"发布课程",index:21},href:"/users/",
+            component:()=>import("@/modules/users/userpub")},
     ]
 };
 
 const AllRouterConfigs=IndexRouterConfig.routes.concat(CourseRouterConfig.routes)
 const IndexRouter=new VueRouter(IndexRouterConfig)
 const CourseRouter=new VueRouter(CourseRouterConfig)
+const UserRouter=new VueRouter(UserRouterConfig)
 
-export {IndexRouter,CourseRouter,AllRouterConfigs}
+export {IndexRouter,CourseRouter,UserRouter,AllRouterConfigs}
 
 //export default new VueRouter(RouterConfig)

@@ -29,6 +29,13 @@ module.exports = {
             title: '课程 - 付费阅读',
             filename: 'course/index.html',
             chunks: ['chunk-vendors', 'chunk-common','course']
+        },
+        users:{
+            entry:'src/modules/users/index.js',
+            template: 'src/templates/users.html',
+            title: '会员中心 - 付费阅读',
+            filename: 'users/index.html',
+            chunks: ['users']
         }
     }
 }
