@@ -20,6 +20,7 @@ module.exports = {
             template: 'src/templates/index.html',
             filename: 'index.html',
             title: '首页 - 付费阅读',
+            // chunks: ['index']
             chunks: ['chunk-vendors', 'chunk-common','index']
             //'chunk-vendors', 'chunk-common' chunk没有这两参数页面为空白！
         },
@@ -28,6 +29,7 @@ module.exports = {
             template: 'src/templates/course.html',
             title: '课程 - 付费阅读',
             filename: 'course/index.html',
+            // chunks: ['course']
             chunks: ['chunk-vendors', 'chunk-common','course']
         },
         users:{
@@ -35,7 +37,8 @@ module.exports = {
             template: 'src/templates/users.html',
             title: '会员中心 - 付费阅读',
             filename: 'users/index.html',
-            chunks: ['users']
+            // chunks: ['users']
+            chunks: ['chunk-vendors', 'chunk-common','users']
         }
     }
 }

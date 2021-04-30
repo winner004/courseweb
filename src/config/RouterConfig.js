@@ -21,13 +21,13 @@ const CourseRouterConfig={
 const UserRouterConfig={
     routes:[
         {path:"/",meta:{navname:"会员中心",index:20},href:"/users/",
-            component:()=>import("@/modules/users/usersindex")},
+            component:()=>import(/* webpackChunkName: "usersindex-chunk" */"@/modules/users/usersindex")},
         {path:"/pub",meta:{navname:"发布课程",index:21},href:"/users/",
-            component:()=>import("@/modules/users/userpub")},
+            component:()=>import(/* webpackChunkName: "userpub-chunk" */"@/modules/users/userpub")},
     ]
 };
 
-const AllRouterConfigs=IndexRouterConfig.routes.concat(CourseRouterConfig.routes)
+const AllRouterConfigs=IndexRouterConfig.routes.concat(CourseRouterConfig.routes).concat(UserRouterConfig.routes)
 const IndexRouter=new VueRouter(IndexRouterConfig)
 const CourseRouter=new VueRouter(CourseRouterConfig)
 const UserRouter=new VueRouter(UserRouterConfig)
